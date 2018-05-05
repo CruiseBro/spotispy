@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Spotispy">
 
 <head>
     <title>Spotispy</title>
     <link type="text/css" rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <script>// Load Config
+	let config;
+
+	try {
+		config = require('../config.json');
+	}catch (e) {
+		let error = "Unknown Error";
+		if (typeof e.code !== 'undefined' && e.code === 'MODULE_NOT_FOUND') {
+			error = "'config.json' not found. \nYou can configure your mirror at the remote address below..."
+		} else if (typeof e.message !== 'undefined') {
+			console.log(e)
+			error = "Syntax Error. \nLooks like there's an error in your config file: " + e.message + '\n' +
+				'Protip: You might want to paste your config file into a JavaScript validator like http://jshint.com/'
+		}
+		console.log(error)
+	}</script>
+
+    <script src="app.js"></script>
+    <script src="../Services/spotifyservice.js"></script>
+    <script src="controller.js"></script>
 </head>
 
-<body>
+<body ng-controller="SpotispyCtrl">
 <div id="loading"></div>
 <img id="background"><img id="cover">
 <div id="track-info">

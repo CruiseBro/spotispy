@@ -16,6 +16,7 @@
     "url": "git://github.com/l3d00m/spotispy.git"
   },
   "dependencies": {
+    "angular": "^1.6.10",
     "dotenv": "^5.0.1",
     "electron": "^1.8.4",
     "electron-localshortcut": "^0.6.1",
