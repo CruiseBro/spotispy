@@ -15,6 +15,8 @@
 			};
 			$http(req).then(function (response) {
 				deferred.resolve(response.data);
+			}, function (error) {
+				deferred.reject(error, refreshKey);
 			});
 
 			return deferred.promise;

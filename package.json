@@ -18,7 +18,7 @@
   "dependencies": {
     "angular": "^1.6.10",
     "dotenv": "^5.0.1",
-    "electron": "^1.8.4",
+    "electron": "^1.8.6",
     "electron-localshortcut": "^0.6.1",
     "spotify-web-api-node": "^3.0.0"
   }
