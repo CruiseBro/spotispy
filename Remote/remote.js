@@ -47,8 +47,8 @@ remote.start = function () {
 				//let access_token = body.access_token;
 				let refresh_token = body.refresh_token;
 				config.refreshKeys.push(refresh_token);
-				saveConfig(config);
 				res.redirect('/#');
+				saveConfig(config);
 			})
 		}
 	});
