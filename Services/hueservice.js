@@ -5,12 +5,12 @@ function HueService($http, $httpParamSerializer, $q) {
 
 	let service = {};
 
-	service.setColor = function (hue, sat) {
+	service.setColor = function (xy) {
 		var deferred = $q.defer();
 		var req = {
 			method: 'PUT',
 			url: url + username + "/lights/" + uid + "/state",
-			data: {"hue": hue, "sat": sat ,"on": true}
+			data: {"xy": xy, "on": true}
 		};
 		$http(req).then(function (response) {
 			deferred.resolve(response);

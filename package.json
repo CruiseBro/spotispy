@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "@types/query-string": "^5.1.0",
-    "angular": "^1.6.10",
+    "angular": "^1.7.0",
     "cors": "^2.8.4",
     "dotenv": "^5.0.1",
-    "electron": "^1.8.6",
+    "electron": "^2.0.1",
     "electron-localshortcut": "^0.6.1",
     "express": "^4.16.3",
     "query-string": "^6.1.0",
