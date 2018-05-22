@@ -10,7 +10,7 @@ function HueService($http, $httpParamSerializer, $q) {
 		var req = {
 			method: 'PUT',
 			url: url + username + "/lights/" + uid + "/state",
-			data: {"xy": xy, "on": true}
+			data: {"xy": xy, "transitiontime": 15}
 		};
 		$http(req).then(function (response) {
 			deferred.resolve(response);
